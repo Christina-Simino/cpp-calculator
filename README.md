@@ -14,7 +14,7 @@ NOTES ON TRACE LOG:
 
 NOTES ON DECISION COUNTING:
 -Decisions are counted for iterating through for loops.
--For switch statements, any case is recorded as one decision.  The reasoning behind this because when compiled, switch statements are converted to jump tables which reduces the number of comparisons required in comparison to numerous if-else statements.
+-For switch statements, any case is recorded as one decision.  The reasoning behind this is because when compiled, switch statements are converted to jump tables which reduces the number of comparisons required in comparison to numerous if-else statements.
 -They are not counted for each loop of the message-handling while loop located in WinMain.
 -The function used for printing trace logs includes an if statement to check if logging is enabled.  This decision is not documented or recorded in the trace logs for demonstration purposes.  Every time a message is sent to the trace log, one additional decision is made.
 -Decisions are not counted for the default case of the main loop, where no input is received.  Documenting this case quickly clutters the trace log and causes the program to lag.  As such, this logging is currently disabled for demonstration purposes.
